@@ -1,43 +1,22 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react"
+import  { GoogleLogin } from "react-google-login"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const responseGoogle = (response)=>{
+    console.log(response);
+    console.log(response.profileObj);
+  }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+  
+     <GoogleLogin
+    clientId="807683840246-h02oqp9buhvgeseb69q7u3k8ooij2ckh.apps.googleusercontent.com"
+    buttonText="Sign with Google"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+  />
     </div>
   )
 }
