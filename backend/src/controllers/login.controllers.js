@@ -32,6 +32,7 @@ router.post("",async(req,res)=>{
         // if it matches
         const token = generateToken(user)
         console.log("trial22")
+        // localStorage.setItem(token);
         return res.status(200).send({user,token});
     }
     catch(err){

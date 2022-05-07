@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Typography } from "@material-ui/core";
 import Drawer from "@mui/material/Drawer";
 import { makeStyles } from "@material-ui/core/styles";
@@ -103,6 +103,21 @@ export const Navbar = () => {
   const handleClick = () => {
     setOpen(!open);
   };
+const [token,setToken]=useState("");
+// let name = token.split("@gmail.com")
+  useEffect(() => {
+    getDetails();
+  },[]);
+  const getDetails = async()=>{
+   let res= await fetch("http://localhost:5000/details",{
+      headers:{
+        'x-access-token': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyNzYzZmQ3NTc3MjNmMmNmYWQ5MTZjZCIsImVtYWlsIjoic2F0aXNoQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JGtmQkRaUUsxcmJGU0xVWWIuejd1ZWU5T05uTHM3MlFOTk5sRWJmZzRzNlcvSUY4M0RtMnYuIiwiY3JlYXRlZEF0IjoiMjAyMi0wNS0wN1QwOTo0NTo1OS43NDZaIiwidXBkYXRlZEF0IjoiMjAyMi0wNS0wN1QwOTo0NTo1OS43NDZaIn0sImlhdCI6MTY1MTk1NDU2NX0.KyhqUJHmtCk6tRJiXJpmUAwfheEW65L6ztWLF8DmhuQ"
+      },
+    })
+    let data = await res.json();
+    setToken(data.posts.email);
+    console.log(data.posts.email);
+  }
   return (
     <>
       <div className='m_navbar'>
@@ -113,7 +128,6 @@ export const Navbar = () => {
             alt=''
             onClick={() => setisDrwaerOpen(true)}
           />
-          .MuiDrawer-paper
         </div>
         <div className='m_navbar_middle'>
           <img
@@ -396,9 +410,11 @@ export const Navbar = () => {
               <div className='login-drawer-logo'>
                 <span>M</span>
               </div>
-              <div className='login-drawer-title'>Ayush Bajpai</div>
+              <div className='login-drawer-title'>
+                {/* Ayush Bajpai */token.split("@gmail.com")}
+                </div>
               <div className='login-drawer-mail'>
-                Mr.ayushbajpai185@gmail.com
+                {/* Mr.ayushbajpai185@gmail.com */token}
               </div>
               <div className='login-drawer-button'>
                 <a href='#'>Edit Profile</a>

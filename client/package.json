@@ -1,6 +1,7 @@
 {
   "name": "ht",
   "private": true,
+  "proxy":"http://localhost:5000/details",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

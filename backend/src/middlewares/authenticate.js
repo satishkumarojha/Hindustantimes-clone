@@ -13,14 +13,16 @@ const verifyToken = (token)=>{
 }
 
 const authenticate = async (req,res,next)=>{
-
-    if(!req.headers.authorization)
+    console.log("trial auth");
+    var tokendetails = req.headers["x-access-token"];
+    console.log(req.headers["x-access-token"]);
+    if(!tokendetails)
     return res.status(400).send({message : "Authorization token not found or incorrect"})
 
-    if(!req.headers.authorization.startsWith("Bearer "))
+    if(!tokendetails.startsWith("Bearer "))
     return res.status(400).send({message : "Authorization token not found or incorrectttt"})
 
-    const token = req.headers.authorization.trim().split(" ")[1];
+    const token = tokendetails.trim().split(" ")[1];
 
     let decoded
 
