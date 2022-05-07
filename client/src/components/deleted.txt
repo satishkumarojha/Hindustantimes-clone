@@ -1,0 +1,281 @@
+
+            {/* <ListItem>
+              <ListItemText className='drawer-listItem' primary='Home' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='India News' />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText
+                className='drawer-listItem'
+                primary='Entertainment'
+              />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='IPL 2022' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Elections' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Cities' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='World  News' />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Lifestyle' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Trending' />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Education' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Astrology' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Opinion' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Anylasis' />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Videos' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Photos' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Sports' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Web Sports' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Bussiness' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Science' />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='HT Insight' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText
+                className='drawer-listItem'
+                primary='CricHT Fantasy'
+              />
+            </ListItem>
+            <Divider />
+            <ListItem onClick={handleClick}>
+              <ListItemText className='drawer-listItem' primary='Games' />
+              {open ? (
+                <ExpandLess className={classes.openClose} />
+              ) : (
+                <ExpandMore className={classes.openClose} />
+              )}
+            </ListItem>
+            <Collapse in={open} timeout='auto' unmountOnExit>
+              <List component='div' disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon></ListItemIcon>
+                  <ListItemText primary='Starred' />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Quiz' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Podcasts' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='Auto' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='HT Tech' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='HT Bangla' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText className='drawer-listItem' primary='HT School' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <ListItemText
+                className='drawer-listItem'
+                primary='HT Brand Stories'
+              />
+            </ListItem>
+            <Divider /> */}
