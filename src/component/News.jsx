@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './news.css'
+// import logo from './logo.svg'
+import './News.css'
 
-function App(){
+function News(){
   const [count, setCount] = useState(0)
   return(
       <div className="conatainer">
@@ -73,4 +73,6 @@ function App(){
   )
 }
 
-export default App
+export default News
+
+

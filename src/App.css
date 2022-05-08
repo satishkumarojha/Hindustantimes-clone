@@ -1,42 +1,100 @@
-.App {
-  text-align: center;
+/* 
+.conatainer{
+      
+ 
+  background-color: 
+  #f5f5f5;
+  padding: 50px;
+}
+.hindustanNews{
+display: flex;
+width: 95%;
+justify-content: space-between ;
+margin: auto;
+
+
+
+}
+.top{
+
+width: 22%;
+height:650px;
+overflow: scroll;
+overflow-x: hidden;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+position: sticky;
+top: 0;
+background-color: white;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.latest{
+
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+width: 50%;
+  height:auto;
+  background-color: white;
+}
+.sport{
+
+width: 25%;
+overflow: scroll;
+overflow-x: hidden;
+height:650px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+position: sticky;
+background-color: white;
+top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.hd{
+  border: 1px solid #dbdbdb;
+  
+  width: 100%;
+
+ 
+  margin-top: -9px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hdstyle1{
+  position: absolute;
+z-index: 10;
+margin-top: -33px;
+background-color:white ;
+
+margin-left: 40px;
+
+}
+.hdstyle2{
+  position: absolute;
+z-index: 10;
+margin-top: -33px;
+background-color:white ;
+
+margin-left: 160px;
+}
+.hdstyle3{
+  position: absolute;
+z-index: 10;
+margin-top: -33px;
+background-color:white ;
+
+margin-left: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.hdstyle1>span{
+  color: #00b1cd;
+}
+.hdstyle2>span{
+  color: #00b1cd;
+}
+.hdstyle3>span{
+  color: #00b1cd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-button {
-  font-size: calc(10px + 2vmin);
-}
+
+
+
+ */
