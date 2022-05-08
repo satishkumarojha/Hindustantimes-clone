@@ -4,7 +4,7 @@ import './Weather.css'
 
 export const Weather = () =>{
     
-    const [city, setCity] = useState('london');
+    const [city, setCity] = useState('delhi');
     const [currTemp , setCurrTemp] = useState(29);
     const [sunRise , setSunRise] = useState(29);
     const [sunSet , setsunSet] = useState(29);
@@ -44,11 +44,11 @@ export const Weather = () =>{
     
             <div className='midCont'>
 
-                <p className='citystate'>New Delhi, India</p>
-
                 <div>
                     <span className='home'>Home </span><span >/ Weather</span>
                 </div>
+                <p className='citystate'>New Delhi, India</p>
+
                 <hr />
                 <hr />
                 <hr />
