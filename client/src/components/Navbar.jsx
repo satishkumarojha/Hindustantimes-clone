@@ -482,7 +482,9 @@ let navigate = useNavigate();
           </List>
         </Box>
       </Drawer>
+      
       <News/>
+      <Footer/>          
     </>
   );
 };
