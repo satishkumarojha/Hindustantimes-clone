@@ -11,6 +11,10 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Collapse from "@mui/material/Collapse";
+import { useNavigate } from "react-router-dom";
+import './Navbar.css';
+import Feeds from "./Feeds";
+import { Footer } from "./Footer";
 const useStyles = makeStyles({
   drawer: {
     width: "500",
@@ -104,6 +108,7 @@ export const Navbar = () => {
     setOpen(!open);
   };
 const [token,setToken]=useState("");
+let navigate = useNavigate();
 // let name = token.split("@gmail.com")
   useEffect(() => {
     getDetails();
@@ -111,7 +116,7 @@ const [token,setToken]=useState("");
   const getDetails = async()=>{
    let res= await fetch("http://localhost:5000/details",{
       headers:{
-        'x-access-token': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyNzYzZmQ3NTc3MjNmMmNmYWQ5MTZjZCIsImVtYWlsIjoic2F0aXNoQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JGtmQkRaUUsxcmJGU0xVWWIuejd1ZWU5T05uTHM3MlFOTk5sRWJmZzRzNlcvSUY4M0RtMnYuIiwiY3JlYXRlZEF0IjoiMjAyMi0wNS0wN1QwOTo0NTo1OS43NDZaIiwidXBkYXRlZEF0IjoiMjAyMi0wNS0wN1QwOTo0NTo1OS43NDZaIn0sImlhdCI6MTY1MTk1NDU2NX0.KyhqUJHmtCk6tRJiXJpmUAwfheEW65L6ztWLF8DmhuQ"
+        'x-access-token': `Bearer ${localStorage.getItem("token")}`
       },
     })
     let data = await res.json();
@@ -202,18 +207,29 @@ const [token,setToken]=useState("");
                 </span>
               </a>
             </div>
-            <div className='navbar-right-login'>
+            <div
+            onClick={()=>{
+              if(localStorage.getItem("token")==undefined){
+                navigate(`/signin`)
+              }
+              else{
+                setisLoginDrwaerOpen(true)
+              }
+            }} 
+            className='navbar-right-login'>
               <img
                 className='custom-icon'
                 src='src/assets/profile.jpeg'
                 alt=''
-                onClick={() => setisLoginDrwaerOpen(true)}
+                
               />
-              <a href='#'>
+              {/* <a href='signin'> */}
                 <span>
-                  <strong>Sign In</strong>
+                  <strong>
+                    {localStorage.getItem("token")!=undefined?"Sign Out":"Sign In"}
+                  </strong>
                 </span>
-              </a>
+              {/* </a> */}
             </div>
           </div>
           <div className='navbar-right-bottom' style={{ color: "white" }}>
@@ -453,11 +469,19 @@ const [token,setToken]=useState("");
             </ListItem>
 
             <ListItem>
-              <ListItemText className='drawer-listItem' primary='Sign Out' />
+              <ListItemText 
+              onClick={(e)=>{
+                
+                localStorage.removeItem("token");
+                navigate(`/`)
+
+              }}
+              className='drawer-listItem' primary='Sign Out' />
             </ListItem>
           </List>
         </Box>
       </Drawer>
+      
     </>
   );
 };
