@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import './Navbar.css';
 import Feeds from "./Feeds";
 import { Footer } from "./Footer";
+import News from "./News";
 const useStyles = makeStyles({
   drawer: {
     width: "500",
@@ -482,6 +483,8 @@ let navigate = useNavigate();
         </Box>
       </Drawer>
       
+      <News/>
+      <Footer/>          
     </>
   );
 };

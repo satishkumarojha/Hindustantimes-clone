@@ -1,0 +1,247 @@
+.conatainer_news {
+  background-color: white;
+  padding: 50px;
+  margin: 0 5%;
+
+  /* display: flex; */
+}
+.hindustanNews {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  gap: 30px;
+}
+.hindustanNews-top {
+  margin: 10% 0;
+}
+.hindustanNews-latest {
+  margin: 5% 0;
+}
+.hindustanNews-sport {
+  margin: 10% 0;
+}
+
+.top {
+  flex: 1;
+
+  height: 650px;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.latest {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* width: 45%; */
+  height: auto;
+  background-color: white;
+  padding: 0 2%;
+  flex: 2;
+}
+.left_bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.left_line_bars {
+  flex: 2.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right_line_bars {
+  flex: 2.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sport {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 650px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: sticky;
+  background-color: white;
+  flex: 1;
+  top: 0;
+}
+
+.hd {
+  /* border: 1px solid #dbdbdb; */
+  color: #dbdbdb;
+  margin: -2.5px 0;
+  width: 100%;
+}
+
+.hdstyle1 {
+  flex: 2;
+  background-color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.hdstyle2 {
+  /* position: absolute; */
+  flex: 1.5;
+  background-color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.hdstyle3 {
+  flex: 2;
+  background-color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hdstyle1 > span {
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+}
+.hdstyle2 > span {
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+}
+.hdstyle3 > span {
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+}
+.side1 {
+  margin: 20px;
+}
+.p1 {
+  color: #b4aaaa;
+}
+.h22 {
+  text-align: center;
+  font-size: small;
+  color: skyblue;
+}
+.hr1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.image1 > img {
+  height: 150px;
+  width: 300px;
+}
+.sport1 {
+  display: flex;
+  margin-top: 10px;
+}
+.sport1 > img {
+  height: 80px;
+  width: 80px;
+  margin-right: 5px;
+}
+.sport1 > p {
+  margin-top: -5px;
+  margin-left: 10px;
+  font-size: medium;
+  font-weight: 700;
+}
+.mainnews-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mainnews-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.mainnews-card > div > h3 {
+  text-align: left;
+  color: #00b1cd;
+  word-wrap: break-word;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+.mainnews-card > div > h2 {
+  text-align: left;
+}
+.mainnews-card > div > p {
+  color: #757575;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  width: 170px;
+}
+.mainnews-card-image > img {
+  width: 100%;
+  border-radius: 5px;
+}
+.news-card {
+  display: flex;
+  gap: 5px;
+  margin: 5% 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.news-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.news-card-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+.news-card-right > img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px;
+}
+.news-card-right {
+  flex: 1;
+}
+.news-card-left > div > h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #00b1cd;
+  margin-bottom: -3%;
+  font-family: "Lato", sans-serif;
+}
+.news-card-left > div {
+  display: flex;
+}
+.news-card-bottom-left {
+  flex: 3;
+}
+.news-card-bottom-right {
+  flex: 1;
+}
+.news-card-left > div > div > p {
+  color: #757575;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  width: 170px;
+}
+.news-share-img {
+  width: 30%;
+  margin: 0 10px;
+}
+.news-save-img {
+  width: 20%;
+  margin: 0 10px;
+}
+.news-card-left > div > h4 {
+  margin-bottom: -3%;
+}
