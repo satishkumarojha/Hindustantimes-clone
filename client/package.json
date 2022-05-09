@@ -3,6 +3,7 @@
   "private": true,
   "proxy": "http://localhost:5000/details",
   "version": "0.0.0",
+  "homepage": "https://github.com/satishkumarojha/Hindustantimes-clone/tree/main/client",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
