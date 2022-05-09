@@ -1,0 +1,213 @@
+
+.conatainer_news{
+  background-color: 
+ white;
+  padding: 50px;
+  margin-top: 5%;
+  /* display: flex; */
+}
+.hindustanNews{
+display: flex;
+width: 100%;
+margin: auto;
+position: relative;
+gap: 30px
+;
+
+
+}
+.top{
+flex: 1;
+/* width: 25%; */
+height:650px;
+overflow: scroll;
+overflow-x: hidden;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+position: sticky;
+top: 0;
+background-color: white;
+
+}
+
+.latest{
+
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/* width: 45%; */
+  height:auto;
+  background-color: white;
+  padding: 0 3%;
+  flex: 2;
+}
+.left_bars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+    flex-wrap: nowrap;
+}
+.left_line_bars{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+}
+.right_line_bars{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+}
+.sport{
+
+/* width: 30%; */
+overflow: scroll;
+overflow-x: hidden;
+height:650px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+position: sticky;
+background-color: white;
+top: 0;
+/* margin-left: 10px; */
+flex: 1;
+}
+
+
+.hd{
+  /* border: 1px solid #dbdbdb; */
+  color: #dbdbdb;
+  margin: -5px 0;
+  width: 100%;
+
+
+}
+
+.hdstyle1{
+
+  flex: 3;
+  background-color:white ;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.hdstyle2{
+  /* position: absolute; */
+flex: 1.5;
+background-color:white ;
+font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+
+}
+.hdstyle3{
+  flex: 2;
+  background-color:white ;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hdstyle1>span{
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+  
+}
+.hdstyle2>span{
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+}
+.hdstyle3>span{
+  color: #00b1cd;
+  font-weight: 800;
+  font-size: large;
+}
+.side1{
+    margin-left: 10px;
+}
+.p1{
+    color: #b4aaaa;
+}.h22{
+    text-align: center;
+    font-size: small;
+    color: skyblue;
+}
+.hr1{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.image1>img{
+    height: 150px;
+    width: 300px;
+   
+}
+.sport1{
+    display: flex;
+    margin-top: 10px;
+}
+.sport1>img{
+    height: 80px;
+    width: 80px;
+    margin-right: 5px;
+}
+.sport1>p{
+    margin-top: -5px;
+    margin-left: 10px;
+    font-size: medium;
+    font-weight: 700;
+}
+.mainnews-card{
+  display: flex;
+  flex-direction: column;
+
+
+}
+.mainnews-card-image>img{
+
+  width: 100%;
+
+}
+.news-card{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.news-card-left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.news-card-right>img{
+  width: 100%;
+
+}
+.news-card-right{
+  flex: 1;
+}
+.news-card-left>div>h3{
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #00b1cd;
+  margin-bottom: -3%;
+  font-family: "Lato",sans-serif;
+ 
+}
+.news-card-left>div>h4{
+  margin-bottom: -3%;
+}
+
+
+
+
+
+
+
