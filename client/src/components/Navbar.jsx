@@ -30,6 +30,9 @@ const useStyles = makeStyles({
     width: "20",
     height: "60px",
   },
+  drawerFooterBox: {
+    height: "300px !important",
+  },
 });
 export const Navbar = () => {
   const [isDrwaerOpen, setisDrwaerOpen] = useState(false);
@@ -406,7 +409,46 @@ export const Navbar = () => {
               }
             })}
           </List>
+
+          <div className='drawer-footer'>
+            <div className='drawer-footer-heading'>Sign In</div>
+            <div className='drawer-footer-icons'>
+              <li>
+                <a href='https://www.facebook.com/hindustantimes'>
+                  <img
+                    src='https://images.hindustantimes.com/images/app-images/2022/1/footer-icons/fb-logo.svg'
+                    alt=''
+                  />
+                </a>
+              </li>
+              <li>
+                <a href='https://www.linkedin.com/company/hindustantimes'>
+                  <img
+                    src='https://images.hindustantimes.com/images/app-images/2022/1/footer-icons/in-logo.svg'
+                    alt=''
+                  />
+                </a>
+              </li>
+              <li>
+                <a href='https://www.instagram.com/hindustantimes/'>
+                  <img
+                    src='https://images.hindustantimes.com/images/app-images/2022/2/instagram.svg'
+                    alt=''
+                  />
+                </a>
+              </li>
+              <li>
+                <a href='https://twitter.com/htTweets'>
+                  <img
+                    src='https://images.hindustantimes.com/images/app-images/2022/1/footer-icons/tw-logo.svg'
+                    alt=''
+                  />
+                </a>
+              </li>
+            </div>
+          </div>
         </Box>
+        {/* </Box> */}
       </Drawer>
       <Drawer
         id='login_drawer'
