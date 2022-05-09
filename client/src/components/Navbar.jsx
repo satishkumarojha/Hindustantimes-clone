@@ -12,8 +12,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Collapse from "@mui/material/Collapse";
 import { useNavigate } from "react-router-dom";
-import './Navbar.css';
-import Feeds from "./Feeds";
+import "./Navbar.css";
 import { Footer } from "./Footer";
 import News from "./News";
 const useStyles = makeStyles({
@@ -108,22 +107,22 @@ export const Navbar = () => {
   const handleClick = () => {
     setOpen(!open);
   };
-const [token,setToken]=useState("");
-let navigate = useNavigate();
-// let name = token.split("@gmail.com")
+  const [token, setToken] = useState("");
+  let navigate = useNavigate();
+  // let name = token.split("@gmail.com")
   useEffect(() => {
     getDetails();
-  },[]);
-  const getDetails = async()=>{
-   let res= await fetch("http://localhost:5000/details",{
-      headers:{
-        'x-access-token': `Bearer ${localStorage.getItem("token")}`
+  }, []);
+  const getDetails = async () => {
+    let res = await fetch("http://localhost:5000/details", {
+      headers: {
+        "x-access-token": `Bearer ${localStorage.getItem("token")}`,
       },
-    })
+    });
     let data = await res.json();
     setToken(data.posts.email);
     console.log(data.posts.email);
-  }
+  };
   return (
     <>
       <div className='m_navbar'>
@@ -209,27 +208,28 @@ let navigate = useNavigate();
               </a>
             </div>
             <div
-            onClick={()=>{
-              if(localStorage.getItem("token")==undefined){
-                navigate(`/signin`)
-              }
-              else{
-                setisLoginDrwaerOpen(true)
-              }
-            }} 
-            className='navbar-right-login'>
+              onClick={() => {
+                if (localStorage.getItem("token") == undefined) {
+                  navigate(`/signin`);
+                } else {
+                  setisLoginDrwaerOpen(true);
+                }
+              }}
+              className='navbar-right-login'
+            >
               <img
                 className='custom-icon'
                 src='src/assets/profile.jpeg'
                 alt=''
-                
               />
               {/* <a href='signin'> */}
-                <span>
-                  <strong>
-                    {localStorage.getItem("token")!=undefined?"Sign Out":"Sign In"}
-                  </strong>
-                </span>
+              <span>
+                <strong>
+                  {localStorage.getItem("token") != undefined
+                    ? "Sign Out"
+                    : "Sign In"}
+                </strong>
+              </span>
               {/* </a> */}
             </div>
           </div>
@@ -428,10 +428,10 @@ let navigate = useNavigate();
                 <span>M</span>
               </div>
               <div className='login-drawer-title'>
-                {/* Ayush Bajpai */token.split("@gmail.com")}
-                </div>
+                {/* Ayush Bajpai */ token.split("@gmail.com")}
+              </div>
               <div className='login-drawer-mail'>
-                {/* Mr.ayushbajpai185@gmail.com */token}
+                {/* Mr.ayushbajpai185@gmail.com */ token}
               </div>
               <div className='login-drawer-button'>
                 <a href='#'>Edit Profile</a>
@@ -470,21 +470,21 @@ let navigate = useNavigate();
             </ListItem>
 
             <ListItem>
-              <ListItemText 
-              onClick={(e)=>{
-                
-                localStorage.removeItem("token");
-                navigate(`/`)
-
-              }}
-              className='drawer-listItem' primary='Sign Out' />
+              <ListItemText
+                onClick={(e) => {
+                  localStorage.removeItem("token");
+                  navigate(`/`);
+                }}
+                className='drawer-listItem'
+                primary='Sign Out'
+              />
             </ListItem>
           </List>
         </Box>
       </Drawer>
-      
-      <News/>
-      <Footer/>          
+
+      <News />
+      <Footer />
     </>
   );
 };
